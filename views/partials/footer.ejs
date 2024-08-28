@@ -1,0 +1,16 @@
+<script>
+    async function searchUsers() {
+      const searchTerm = document.getElementById('searchInput').value;
+      
+      try {
+        const response = await fetch(`/users/search?q=${searchTerm}`);
+        const users = await response.json();
+        console.log(users); // Handle the user data as needed
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+</html>

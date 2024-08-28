@@ -1,0 +1,12 @@
+<% include ./partials/header.ejs %>
+<% username.forEach(function(elem){ %>
+<div class="card w-32">
+    <div class="w-full h-40 bg-sky-200 rounded-lg overflow-hidden">
+        <img class="w-full h-full object-cover"
+            src="/images/uploads/<%=elem.image%>">
+    </div>
+    <h5 class="mt-2 text-sm"><%=elem.title%></h5>
+    <h6 class="text-xs opacity-500">@<%=elem.user.username %></h6>
+</div>
+<% })%>
+<% include ./partials/footer.ejs %>
